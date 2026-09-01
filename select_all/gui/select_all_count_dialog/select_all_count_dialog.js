@@ -44,3 +44,7 @@ function select_all_count_toggle()
     arrow_up.enabled = count_lbl.enabled;
     arrow_down.enabled = count_lbl.enabled;
 }
+function select_all_count_cancel()
+{
+    Engine.GetGUIObjectByName("select_all_count_dialog").hidden = true;
+}

@@ -57,8 +57,15 @@
 		<object
 			style="ModernButtonRed"
 			type="button"
+			caption="Cancel"
+			size="40% 58% 49% 62%">
+			<action on="Press">select_all_count_cancel();</action>
+		</object>		
+		<object
+			style="ModernButtonRed"
+			type="button"
 			caption="OK"
-			size="47% 58% 53% 62%">
+			size="51% 58% 60% 62%">
 			<action on="Press">select_all_count_selects();</action>
 		</object>		
 	</object>
