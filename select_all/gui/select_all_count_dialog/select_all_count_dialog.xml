@@ -10,23 +10,23 @@
 		<object type="text" style="ModernLabelText" size="35% 35%-10 65% 35%+10" caption="Refine your selection"/>
 		<object size="37% 37%+10 50% 37%+30">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Idle"/>
-			<object type="checkbox" name="idle_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select idle units"/>
+			<object type="checkbox" name="select_all_idle_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select idle units"/>
 		</object>
 		<object size="37% 37%+35 50% 37%+55">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering food"/>
-			<object type="checkbox" name="food_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering food."/>
+			<object type="checkbox" name="select_all_food_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering food."/>
 		</object>
 		<object size="37% 37%+60 50% 37%+80">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering wood"/>
-			<object type="checkbox" name="wood_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering wood."/>
+			<object type="checkbox" name="select_all_wood_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering wood."/>
 		</object>
 		<object size="37% 37%+85 50% 37%+105">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering stone"/>
-			<object type="checkbox" name="stone_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering stone."/>
+			<object type="checkbox" name="select_all_stone_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering stone."/>
 		</object>
 		<object size="37% 37%+110 50% 37%+130">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Gathering metal"/>
-			<object type="checkbox" name="metal_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering metal."/>
+			<object type="checkbox" name="select_all_metal_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select units gathering metal."/>
 		</object>
 		
 		<object type="text" style="ModernLabelText" size="50%+10 37%+35 63% 37%+55" caption="How many units to select?"/>
@@ -37,11 +37,11 @@
 				<object type="image" sprite="stretched:session/icons/corners.png" ghost="true"/>
 				<object name="select_all_count_label" type="text" style="ModernLabelText" ghost="true" caption="1"/>
 			</object>
-			<object type="button" size="36 0 52 50%" style="iconButton">
+			<object type="button" name="select_all_arrow_up" size="36 0 52 50%" style="iconButton">
 				<action on="Press">select_all_count_change(1);</action>
 				<object type="image" sprite="StoneArrowUp" ghost="true"/>
 			</object>
-			<object type="button" size="36 50% 52 100%" style="iconButton">
+			<object type="button" name="select_all_arrow_down" size="36 50% 52 100%" style="iconButton">
 				<action on="Press">select_all_count_change(-1);</action>
 				<object type="image" sprite="StoneArrowDn" ghost="true"/>
 			</object>
@@ -49,7 +49,9 @@
 		
 		<object size="50%+95 37%+85 63% 37%+105">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="All"/>
-			<object type="checkbox" name="all_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select all units regardless of number."/>
+			<object type="checkbox" name="select_all_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select all units regardless of number.">
+				<action on="Press">select_all_count_toggle();</action>
+			</object>
 		</object>
 
 		<object
