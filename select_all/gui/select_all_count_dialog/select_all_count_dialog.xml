@@ -2,12 +2,10 @@
 <objects>
     <script file="gui/select_all_count_dialog/select_all_count_dialog.js"/>
 	<object name="select_all_count_dialog" hidden="true">
-		<object
-			style="ModernDialog"
-			type="image"
-			size="35% 35% 65% 65%"
-		/>
-		<object type="text" style="ModernLabelText" size="35% 35%-10 65% 35%+10" caption="Refine your selection"/>
+		
+		<object style="ModernDialog" type="image" size="35% 35% 65% 60%"/>
+		<object type="text" style="ModernLabelText" size="35% 35%-8 65% 35%+4" caption="Refine your selection"/>
+
 		<object size="37% 37%+10 50% 37%+30">
 			<object type="text" style="ModernLabelText" text_align="left" text_valign="center" size="25 0 100% 100%" caption="Idle"/>
 			<object type="checkbox" name="select_all_idle_chk"  style="ModernTickBox" checked="false"  size="0 0 20 20" tooltip="Select idle units"/>
@@ -54,19 +52,12 @@
 			</object>
 		</object>
 
-		<object
-			style="ModernButtonRed"
-			type="button"
-			caption="Cancel"
-			size="40% 58% 49% 62%">
+		<object style="ModernButtonRed" type="button" caption="Cancel" size="35%+20 60%-48 50%-5 60%-20"> 
 			<action on="Press">select_all_count_cancel();</action>
 		</object>		
-		<object
-			style="ModernButtonRed"
-			type="button"
-			caption="OK"
-			size="51% 58% 60% 62%">
+		<object style="ModernButtonRed" type="button" caption="OK" size="50%+5 60%-48 65%-20 60%-20">
 			<action on="Press">select_all_count_selects();</action>
-		</object>		
+		</object>
+		
 	</object>
 </objects>
